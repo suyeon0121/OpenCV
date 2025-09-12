@@ -1,5 +1,3 @@
-# Image Filtering Project
-
 # 이미지 필터링 
 이미지에서 노이즈 제거, 특징 강조, 후속 처리(에지 검출 등) 용이
 Gaussian Blur
