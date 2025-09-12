@@ -12,11 +12,11 @@ Gaussian Blur
 
 2. Canny 에지 검출
 이미지에서 경계를 검출하여 객체 윤곽 강조
-  1. 노이즈 제거: Gaussian Blur 사용
-  2. 그래디언트 계산: 픽셀 밝기 변화량 계산
-  3. Non-maximum suppression: 얇은 에지로 정리
-  4. 이중 임계값: 강한/약한 에지 결정
-  5. Edge Tracking: 약한 에지를 강한 에지에 연결
+  - 노이즈 제거: Gaussian Blur 사용
+  - 그래디언트 계산: 픽셀 밝기 변화량 계산
+  - Non-maximum suppression: 얇은 에지로 정리
+  - 이중 임계값: 강한/약한 에지 결정
+  - Edge Tracking: 약한 에지를 강한 에지에 연결
 
     canny = cv2.Canny(gray, 100, 200)
     - 100: 하한 임계값 -> 약한 에지 기준
