@@ -24,3 +24,6 @@ Input: BGR 컬러 이미지
 
 ### Result
 하나의 이미지에서 원본, 그레이스케일, 블러, 에지 검출 결과를 동시에 확인할 수 있다. 각 전처리 단계가 이미지 구조에 미치는 영향을 명확히 비교할 수 있다. 
+
+<img width="1230" height="818" alt="image filtering" src="https://github.com/user-attachments/assets/32462cf5-e7f1-4e9b-8394-59638030cafd" />
+
