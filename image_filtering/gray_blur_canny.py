@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-image = cv2.imread("food.jpg")
+image = cv2.imread(r"C:\P\Image filtering\food.jpg")
 
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
