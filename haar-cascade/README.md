@@ -1,23 +1,25 @@
-# haar_cascade
-Haar Cascade Classifier는 OpenCV에서 제공하는 고전적인 객체 탐지 알고리즘이다. 
-얼굴, 눈, 입, 자동차 번호판 등 사전에 학습된 모델(XML 파일)을 이용해 객체를 찾는다. 
-영상의 여러 크기를 스캔하면서 특징(밝기 대비 패턴, 사각형 모양 필터)을 추출해 객체 여부를 판별한다. 
+## haar_cascade
+### Overview
+OpenCV의 Haar Casade Classifier를 사용하여 정지 이미지에서 얼굴과 눈을 단계적으로 탐지한다. 얼굴 영역을 먼저 검출한 뒤, 해당 영역 내부에서 눈을 추가로 검출한다. 
 
-faces = face_cascade.detectMultiScale(
-    gray, 
-    scaleFactor=1.1, 
-    minNeighbors=5
-)
+### Key Idea
+Haar Cascade는 사전에 학습된 특징 기반 분류기를 사용해 이미지 내 객체 위치를 빠르게 탐색한다. 얼굴을 먼저 검출하고 관심 영역(ROI) 안에서 눈을 탐지하면 탐색 범위를 줄여 정확도와 효율을 동시에 확보할 수 있다. 
 
-- scaleFactor: 이미지 크기를 줄여가며 탐지할 비율 (1.1 -> 10%씩 축소하며 탐색)
-  --> 작을수록 정밀하지만 속도는 느림
+### Detection Pipeline
+Input: BGR 컬러 이미지
+- BGR -> Grayscale
+- Face Detection(Haar Cascade)
+- Face ROI 내 Eye Detection (Haar Cascade)
+- 검출 결과 시각화 (Bounding Box)
 
-- minNeighbors: 얼굴이라고 판단하기 위해 겹쳐야 하는 사각형 수
-  - 값이 크면 -> 정확도 높음, 검출 수 낮음(엄격).
-  - 값이 작으면 -> 정확도 낮음, 검출 수 높음(느슨).
+### Implmentation Details
+- Face Cascade: haarcascade_frontalface_default.xml
+- Eye Cascade: haarcascade_eye.xml
+- Detection: detectMultiScale
+- 시각화: cv2.rectangle, cv2.imshow
 
-- 반환값: 여러 객체 좌표 -> (x, y, w, h) 리스트.
-
+### Result
+이미지에서 얼굴 영역이 파란색 박스로 검출되고, 각 얼굴 내부에서 눈이 초록색 박스로 추가 검출된다. 계층적 탐지를 통해 불필요한 오탐지를 줄인다.
 
 <img width="1195" height="802" alt="image" src="https://github.com/user-attachments/assets/bfa4b6a5-6b14-441a-9631-2e3ef4e07ca4" />
 
