@@ -9,6 +9,10 @@
 
 <br/>
 
+### 결과 
+
+<br/>
+
 ```
 Mat img1 = imread("cat.bmp");
 Mat img2 = img1(Rect(220, 120, 340, 240));
