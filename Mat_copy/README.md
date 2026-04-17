@@ -23,5 +23,6 @@ img3 = img1;        //대입연산자(얕은복사
 
 ### 결과 
 
-<img width="946" height="541" alt="image" src="https://github.com/user-attachments/assets/b4160fd1-2291-4e00-8d9c-ca6ac3694ac3" />
+<img width="825" height="546" alt="image" src="https://github.com/user-attachments/assets/bb76e91a-80bc-4561-92a4-9166a29f2284" />
+
 
