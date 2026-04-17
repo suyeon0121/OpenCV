@@ -7,6 +7,8 @@
 
 <br/>
 
+<br/>
+
 ```
 Mat img1 = imread("cat.bmp");
 Mat img2 = img1(Rect(220, 120, 340, 240));
@@ -15,6 +17,8 @@ Mat img2 = img1(Rect(220, 120, 340, 240));
 <br/>
 
 <img width="533" height="278" alt="image" src="https://github.com/user-attachments/assets/5284a61b-00fe-4fe4-b999-cf00dd1b959d" />
+
+<br/>
 
 <br/>
 
